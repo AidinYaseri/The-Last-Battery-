@@ -1,0 +1,21 @@
+{
+  "name": "the-last-battery",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "THE LAST BATTERY - a first-person mystery/horror browser game built with Three.js + TypeScript",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "three": "^0.180.0"
+  },
+  "devDependencies": {
+    "@types/three": "^0.180.0",
+    "typescript": "~5.8.0",
+    "vite": "^6.3.0"
+  }
+}

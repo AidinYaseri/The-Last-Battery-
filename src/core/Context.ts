@@ -1,0 +1,54 @@
+import type * as THREE from 'three';
+import type { GameState } from './GameState';
+import type { Scheduler } from './Scheduler';
+import type { Input } from './Input';
+import type { Settings } from './Settings';
+import type { SceneManager } from './SceneManager';
+import type { AudioManager } from '../audio/AudioManager';
+import type { HUD } from '../ui/HUD';
+import type { InteractionSystem } from '../interaction/InteractionSystem';
+import type { CollisionWorld } from '../world/Colliders';
+import type { Player } from '../player/Player';
+import type { Phone } from '../phone/Phone';
+import type { BatterySystem } from '../phone/BatterySystem';
+import type { Inventory } from '../inventory/Inventory';
+import type { ClueSystem } from '../story/ClueSystem';
+import type { StoryManager } from '../story/StoryManager';
+import type { DialogueSystem } from '../story/DialogueSystem';
+import type { EndingSystem } from '../story/EndingSystem';
+import type { ModalUI } from '../ui/ModalUI';
+import type { LevelManager } from '../levels/LevelManager';
+import type { SaveManager } from '../save/SaveManager';
+import type { Flashlight } from '../player/Flashlight';
+import type { Game } from './Game';
+import type { Transition } from '../ui/Transition';
+
+/** Everything a level or system may need. Passed around instead of globals. */
+export interface GameContext {
+  game: Game;
+  sceneManager: SceneManager;
+  scene: THREE.Scene;
+  camera: THREE.PerspectiveCamera;
+  renderer: THREE.WebGLRenderer;
+  state: GameState;
+  scheduler: Scheduler;
+  input: Input;
+  settings: Settings;
+  audio: AudioManager;
+  hud: HUD;
+  interaction: InteractionSystem;
+  collision: CollisionWorld;
+  player: Player;
+  flashlight: Flashlight;
+  phone: Phone;
+  battery: BatterySystem;
+  inventory: Inventory;
+  clues: ClueSystem;
+  story: StoryManager;
+  dialogue: DialogueSystem;
+  endings: EndingSystem;
+  modal: ModalUI;
+  levels: LevelManager;
+  save: SaveManager;
+  transition: Transition;
+}
