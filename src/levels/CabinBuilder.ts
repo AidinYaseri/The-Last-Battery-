@@ -92,11 +92,11 @@ export function buildCabin(b: Builder, o: { truth?: boolean } = {}): CabinRefs {
   const r = rng(o.truth ? 404 : 44);
   const wallCanvas = photoCollage(o.truth ? 1 : 0);
   const photoWall = b.canvasPlane(wallCanvas, 4.6, -6.86, 1.55, 2.75, Math.PI / 2);
-  b.sofa(-3.6, 4.4, Math.PI);
-  b.table(-3.6, 2.8, 1.2, 0.6, 0, 0.45);
-  b.box(2.6, 0.01, 2, colorMat(0x5a2a22, 1), -3.6, 0.03, 3, { cast: false });
+  b.sofa(-3.6, 3.0, Math.PI);
+  b.table(-3.6, 1.7, 1.2, 0.6, 0, 0.45);
+  b.box(2.6, 0.01, 2, colorMat(0x5a2a22, 1), -3.6, 0.03, 2.3, { cast: false });
   b.box(0.9, 0.9, 0.25, colorMat(0x1a1a1a, 0.6), -1.2, 0.15, 4.9, { collide: true });
-  b.box(0.2, 0.16, 0.08, colorMat(0xc8a060, 0.4), -3.5, 0.47, 2.7);
+  b.box(0.2, 0.16, 0.08, colorMat(0xc8a060, 0.4), -3.5, 0.47, 1.6);
   // fireplace
   b.box(1.4, 1.1, 0.5, texMat('rock', 1, { color: 0x6a6460 }), -2.2, 0, 0.55, { collide: true });
   b.box(0.8, 0.6, 0.05, colorMat(0x050505, 1), -2.2, 0.15, 0.81, { cast: false });
